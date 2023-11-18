@@ -33,25 +33,25 @@ class EmployeeController extends MainController
         // step 4 => employee-finances
         // step 5 => attendance
 
-        if($step == 1 && ! havePermissionTo('employees.personal-information')) {
-            abort(403,'User have not permission for this page access.');
-         }
-
-        if($step == 2 && ! havePermissionTo('employees.academic-info')) {
-            abort(403,'User have not permission for this page access.');
-        }
-
-        if($step == 3 && ! havePermissionTo('employees.employment-info')) {
-            abort(403,'User have not permission for this page access.');
-        }
-
-        if($step == 4 && ! havePermissionTo('employees.employee-finances')) {
-            abort(403,'User have not permission for this page access.');
-        }
-
-        if($step == 5 && ! havePermissionTo('employees.attendance')) {
-            abort(403,'User have not permission for this page access.');
-        }
+//        if($step == 1 && ! havePermissionTo('employees.personal-information')) {
+//            abort(403,'User have not permission for this page access.');
+//         }
+//
+//        if($step == 2 && ! havePermissionTo('employees.academic-info')) {
+//            abort(403,'User have not permission for this page access.');
+//        }
+//
+//        if($step == 3 && ! havePermissionTo('employees.employment-info')) {
+//            abort(403,'User have not permission for this page access.');
+//        }
+//
+//        if($step == 4 && ! havePermissionTo('employees.employee-finances')) {
+//            abort(403,'User have not permission for this page access.');
+//        }
+//
+//        if($step == 5 && ! havePermissionTo('employees.attendance')) {
+//            abort(403,'User have not permission for this page access.');
+//        }
        $tree = array_merge($this->tree, [route('admin.employees.index') => 'employees']);
         return view('admin.employees.create')->with(['employee_id'=>$employee_id, 'step' => $step, 'tree' => $tree]);
     }
