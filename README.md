@@ -1,6 +1,5 @@
-# VMedia developers
+# V Dashbaord
 
-## vision dimensions dashboard
 
 ### Installation
 
@@ -81,8 +80,8 @@ Run the database seeder and you're done
 
 **Accounts**
 
-    admin@vision.com   
-    manager@vision.com
+    admin@dashboard.com   
+    manager@dashboard.com
 
 You can now access the server at http://localhost:8000
 
